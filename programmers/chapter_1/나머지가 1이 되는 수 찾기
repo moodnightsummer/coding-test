@@ -1,0 +1,12 @@
+function solution(n) {
+  const number = n - 1;
+  var answer = 0;
+  for (let i = 2; i < n; i++) {
+    if (number % i === 0) {
+      answer = i;
+      break;
+    }
+  }
+
+  return answer;
+}
