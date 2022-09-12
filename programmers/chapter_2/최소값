@@ -1,3 +1,4 @@
+// my code
 function solution(n) {
   let answer = arr[0];
 
@@ -10,3 +11,14 @@ function solution(n) {
 
 let arr = [5, 7, 1, 3, 2, 9, 11];
 console.log(solution(arr));
+
+// new code
+function solution2(n) {
+  let answer = n.sort((a, b) => {
+    return a - b;
+  });
+
+  return answer[0];
+}
+
+console.log(solution2(arr));
