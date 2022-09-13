@@ -1,0 +1,18 @@
+function solution(n) {
+  let answer = n.filter((a) => {
+    return a % 2 === 1;
+  });
+
+  console.log(
+    answer.reduce((a, b) => {
+      return a + b;
+    }, 0)
+  );
+
+  console.log(answer.sort()[0]);
+
+  return answer;
+}
+
+const arr = [12, 77, 38, 41, 53, 92, 85];
+solution(arr);
