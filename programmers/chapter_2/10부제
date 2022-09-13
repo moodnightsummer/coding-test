@@ -1,0 +1,10 @@
+function solution(day, carArr) {
+  return (answer = carArr.filter((a) => {
+    const configData = String(a).slice(1);
+    return configData === String(day);
+  }).length);
+}
+
+const carArr = [12, 20, 54, 30, 87, 91, 30];
+
+console.log(solution(0, carArr));
