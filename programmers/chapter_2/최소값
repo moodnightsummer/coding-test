@@ -14,7 +14,7 @@ console.log(solution(arr));
 
 // new code
 function solution2(n) {
-  // slice 메서드로 새 객체에 깊은 복사를 하여 사용한다.
+  // slice 메서드로 새 객체에 얕은 복사를 하여 사용한다.
   const _n = n.slice();
 
   let answer = _n.sort((a, b) => {
