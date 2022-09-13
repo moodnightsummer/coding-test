@@ -1,21 +1,41 @@
+// my code
+// function solution(n) {
+//   let sum = n.reduce((a, b) => a + b) - 100;
+//   let temp = [];
+//
+//   outerFor: for (let i = 0; i < n.length; i++) {
+// for (let j = 1; j < n.length - 1; j++) {
+//   if (n[i] + n[j] === sum) {
+// temp.push(n[i]);
+// temp.push(n[j]);
+//
+// break outerFor;
+//   }
+// }
+//   }
+//
+//   const answer = n.filter((obj) => !temp.includes(obj));
+//
+//   return answer;
+// }
+
+// new code
 function solution(n) {
   let sum = n.reduce((a, b) => a + b) - 100;
-  let temp = [];
+  const answer = n.slice();
 
   outerFor: for (let i = 0; i < n.length; i++) {
     for (let j = 1; j < n.length - 1; j++) {
       if (n[i] + n[j] === sum) {
-        temp.push(n[i]);
-        temp.push(n[j]);
+        answer.splice(j, 1);
+        answer.splice(i, 1);
 
         break outerFor;
       }
     }
   }
 
-  const answer = n.filter((obj) => !temp.includes(obj));
-
   return answer;
 }
 
-console.log(solution([16, 20, 15, 23, 12, 27, 10, 9, 7]));
+console.log(solution([20, 7, 23, 19, 10, 15, 25, 8, 13]));
