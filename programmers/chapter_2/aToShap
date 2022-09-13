@@ -1,0 +1,5 @@
+function replace(word) {
+  return word.replaceAll("A", "#");
+}
+
+console.log(replace("BAAAAA"));
