@@ -1,0 +1,13 @@
+function solution(word) {
+  let answer = "";
+  for (let x of word) {
+    answer +=
+      x.charCodeAt() > 65 && x.charCodeAt() < 91
+        ? String.fromCharCode(x.charCodeAt() + 32)
+        : String.fromCharCode(x.charCodeAt() - 32);
+  }
+
+  return answer;
+}
+
+console.log(solution("doREORTFLdoeldRdEed"));
