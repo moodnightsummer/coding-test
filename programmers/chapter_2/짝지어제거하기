@@ -1,0 +1,20 @@
+function solution(word) {
+  let answer = word;
+
+  let count = 0;
+  while (count < answer.length) {
+    if (word[count] === word[count + 1]) {
+      answer += word.slice(count + count + 1);
+      answer += word.slice(count + 3);
+      console.log(answer);
+      count = 0;
+    } else {
+      count++;
+    }
+  }
+
+  console.log(answer);
+  return answer;
+}
+
+console.log(solution("baabaa"));
