@@ -1,0 +1,26 @@
+{
+  "name": "coding-test",
+  "version": "1.0.0",
+  "description": "코딩 테스트 공부한 것을 올립니다.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moodnightsummer/coding-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moodnightsummer/coding-test/issues"
+  },
+  "homepage": "https://github.com/moodnightsummer/coding-test#readme",
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
