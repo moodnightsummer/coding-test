@@ -1,24 +1,24 @@
-function solution(s){
-    let count = 0;
+function solution(s) {
+  let count = 0;
 
-    for (let i = 0; i < s.length; i++) {
-        if(s[i] === '(') {
-            count +=1;
-        } else {
-            count -=1;
-        }   
-        if(count < 0) {
-            return false;
-        }
-    }
-
-    if(count === 0) {
-        return true;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(") {
+      count += 1;
     } else {
-        return false;
+      count -= 1;
     }
+    if (count < 0) {
+      return false;
+    }
+  }
+
+  if (count === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-const test = solution('(())()()()()');
+const test = solution("(())()()()()");
 
 console.log(test);
