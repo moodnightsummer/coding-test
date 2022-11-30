@@ -1,0 +1,22 @@
+function gcd(a, b) {
+  while (b > 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
+function lcm(a, b) {
+  return (a * b) / gcd(a, b);
+}
+
+function solution(arr) {
+  let answer = 1;
+  for (let i = 0; i < arr.length; i++) {
+    answer = lcm(answer, arr[i]);
+  }
+  return answer;
+}
+
+console.log(solution([1, 2, 3]));
